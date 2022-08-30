@@ -1,0 +1,44 @@
+.card-1 {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  border-radius: 20px !important;
+  box-shadow: 0 0 30px rgb(75, 75, 75);
+  transition: all 2s ease;
+  cursor: pointer;
+}
+
+.card-img-top {
+  border-radius: 20px;
+}
+
+.ctg-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.card-1:hover.card-img-top {
+  box-shadow: 10px 10px 10px 2px rgb(0, 0, 0) inset;
+}
+
+.card-1:hover .ctg-title {
+  color: #fff;
+  display: block;
+  z-index: 100;
+}
+
+.hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.693);
+  display: none;
+}
+
+.card-1:hover .hover {
+  display: block;
+}

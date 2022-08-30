@@ -1,0 +1,17 @@
+.img-fluid {
+  border-radius: 20px 0px 0px 20px;
+}
+
+.buttons {
+  background-color: transparent;
+  border: none;
+  border: 2px solid blueviolet;
+  color: blueviolet;
+  border-radius: 10px;
+  transition: all 0.5 ease;
+}
+
+.buttons:hover {
+  color: #fff;
+  background-color: blueviolet;
+}
