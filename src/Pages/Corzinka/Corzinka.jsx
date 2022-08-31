@@ -36,8 +36,6 @@ export default function Corzinka() {
   const { corzinka, setCorzinka } = useContext(Context);
   const { orders, setOrders } = useContext(Context);
 
-  console.log(orders);
-
   const [variables, setVariables] = useState({
     client: "",
     location: "",
@@ -51,11 +49,12 @@ export default function Corzinka() {
   };
 
   const handleChange = (element, e) => {
+    let obj = { ...e };
     const filterData = orders.filter((ord) => ord.id !== e.id);
 
-    e.count = element.target.value;
+    obj.count = element.target.value;
 
-    setOrders([...filterData, e]);
+    setOrders([...filterData, obj]);
   };
 
   const [creatingOrder] = useMutation(CREATE_ORDER, {
@@ -76,6 +75,7 @@ export default function Corzinka() {
     }
 
     const date = new Date();
+
     let time = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}-${date.getFullYear()}-${date.getMonth()}-${date.getUTCDay()}`;
 
     variables.purchase = purchase;
